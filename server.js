@@ -1,6 +1,5 @@
 const Hapi = require("hapi");
 const fs = require("fs");
-
 const server = new Hapi.Server({
         "host": process.env.HOST || 'localhost',
         "port": process.env.PORT || 3000
@@ -19,9 +18,9 @@ server.route({
      path: '/submit',
      config: { 	 
      	payload: {
-            timeout:false,
          	output: 'stream',
          	parse: true,
+         	timeout: false,
          	allow: 'multipart/form-data',
             maxBytes: 1000000000 
      	},    	 
