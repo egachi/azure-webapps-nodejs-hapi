@@ -19,6 +19,7 @@ server.route({
      path: '/submit',
      config: { 	 
      	payload: {
+            timeout:false,
          	output: 'stream',
          	parse: true,
          	allow: 'multipart/form-data',
